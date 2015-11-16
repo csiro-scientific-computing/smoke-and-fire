@@ -281,10 +281,6 @@ div.csiro-standard-menu {
     left: 10px;
     /*padding: 2px 6px;*/
   }
-  #footer p {
-    /*font-size: 8px;*/
-    /*line-height: 10px;*/
-  }
   #title {
     /*font-size: 20px;*/
     /*letter-spacing: 6px;*/
@@ -293,7 +289,7 @@ div.csiro-standard-menu {
     /*font-size: 10px;*/
   }
   #legend {
-    /*display: none;*/
+    display: none;
   }
   .time {
     top: 100px;
@@ -301,6 +297,7 @@ div.csiro-standard-menu {
     /*font-size: 10px;*/
   }
   #controls {
+    display: none;
     /*font-size: 10px;*/
     /*line-height: 10px;*/
     right: 10px;
@@ -321,15 +318,18 @@ div.csiro-standard-menu {
 }
 
 @media (max-width: 800px) {
+  div.csiro-standard-menu {
+    display: none;
+  }
   #credits {
-    /*display: none;*/
+    margin-left: 5px;
   }
   #loading {
     font-size: 14px;
   }
   #sources {
     position: initial;
-    margin-left: 35px;
+    margin-left: 5px;
   }
   #sources p {
     margin: 0;
