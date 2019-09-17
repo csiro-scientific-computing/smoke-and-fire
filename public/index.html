@@ -1,13 +1,14 @@
-<!doctype HTML>
+<!DOCTYPE html>
 <head>
-  <title>Smoke and Fire</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>
+    Smoke and Fire: Air Pollution in New South Wales and in Australia
+  </title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" type="image/png" href="favicon.png" />
 </head>
 
 <body>
-
   <div id="wrapper">
     <div id="container" style="opacity: 0"></div>
     <div id="debug"></div>
@@ -17,11 +18,12 @@
       <p id="subtitle">Air Pollution in NSW and in Australia</p>
     </header>
 
-    <section class="time"><time title="time in Sydney" id="time"></time></section>
+    <section class="time">
+      <time title="time in Sydney" id="time"></time>
+    </section>
 
     <section id="controls">
       <div class="control">
-
         <div>
           <p>
             Click to change display:
@@ -29,8 +31,11 @@
         </div>
 
         <div>
-          <label class="control-title select-label" title="Select to focus on a region">
-          Zoom into:
+          <label
+            class="control-title select-label"
+            title="Select to focus on a region"
+          >
+            Zoom into:
             <select id="focus" class="control-options" tabindex="1">
               <option value="earth" selected>Earth</option>
               <option value="australia">Australia</option>
@@ -39,72 +44,122 @@
             </select>
           </label>
           <p class="show-controls">
-            <label title="Enable to automatically change focus every minute" tabindex="2"><input type="checkbox" id="start_presentation">Auto camera</label>
+            <label
+              title="Enable to automatically change focus every minute"
+              tabindex="2"
+              ><input type="checkbox" id="start_presentation" />Auto
+              camera</label
+            >
           </p>
         </div>
 
         <div class="control-title">
           <span class="show-controls-label">Show data:</span>
           <p class="show-controls">
-            <label title="Show PM2.5 particles"><input type="checkbox" id="show_PM25" checked>PM2.5 particles</label><br>
-            <label title="Show inland emission sources"><input type="checkbox" id="show_inland" checked>Inland emission sources</label><br>
-            <label title="Show shipping plume trails near New South Wales"><input type="checkbox" id="show_shipping" checked>NSW: Shipping plume</label><br>
-            <label title="Show annual shipping emissions"><input type="checkbox" id="show_pointsources">Annual shipping emissions</label>
+            <label title="Show PM2.5 particles"
+              ><input type="checkbox" id="show_PM25" checked />Inland PM2.5
+              particles</label
+            ><br />
+            <label title="Show inland emission sources"
+              ><input type="checkbox" id="show_inland" checked />Other inland
+              emissions</label
+            ><br />
+            <label title="Show shipping plume trails near New South Wales"
+              ><input type="checkbox" id="show_shipping" checked />NSW: Shipping
+              plume</label
+            ><br />
+            <label title="Show annual shipping emissions"
+              ><input type="checkbox" id="show_pointsources" checked />Annual
+              shipping emissions</label
+            >
           </p>
           <span class="show-controls-label">Show helpers:</span>
           <p class="show-controls">
-            <label title="Show data boundaries"><input type="checkbox" id="show_dataBoundaries">Data boundaries</label>
+            <label title="Show data boundaries"
+              ><input type="checkbox" id="show_dataBoundaries" />Data
+              boundaries</label
+            >
           </p>
         </div>
 
-        <div class="control-title" id="tools" style="display: none">
+        <div class="control-title" id="tools" style="opacity: 0">
           <span class="show-controls-label">Tools:</span>
           <p class="show-controls">
             <label>
               Plume min
-              <input type="range" min="0" max="0.2" step="0.001" id="tool-plume-min">
-              <span id="tool-plume-min-display"></span>
-            </label><br>
+              <input
+                type="range"
+                min="0"
+                max="0.2"
+                step="0.001"
+                id="tool-plume-min"
+              />
+              <span id="tool-plume-min-display"></span> </label
+            ><br />
             <label>
               Plume max
-              <input type="range" min="0.001" max="5" step="0.001" id="tool-plume">
-              <span id="tool-plume-display"></span>
-            </label><br>
+              <input
+                type="range"
+                min="0.001"
+                max="5"
+                step="0.001"
+                id="tool-plume"
+              />
+              <span id="tool-plume-display"></span> </label
+            ><br />
             <label>
               Smoke min
-              <input type="range" min="0" max="5" step="0.01" id="tool-smoke-min">
-              <span id="tool-smoke-min-display"></span>
-            </label><br>
+              <input
+                type="range"
+                min="0"
+                max="5"
+                step="0.01"
+                id="tool-smoke-min"
+              />
+              <span id="tool-smoke-min-display"></span> </label
+            ><br />
             <label>
               Smoke max
-              <input type="range" min="1" max="500" step="1" id="tool-smoke">
+              <input type="range" min="1" max="500" step="1" id="tool-smoke" />
               <span id="tool-smoke-display"></span>
             </label>
           </p>
           <p class="show-controls">
             <label>
               Speed
-              <input type="range" min="0.1" max="10" step="0.1" value="1" id="tool-speed">
-              <span id="tool-speed-display">1.0</span>
+              <input
+                type="range"
+                min="0.1"
+                max="10"
+                step="0.1"
+                value="2"
+                id="tool-speed"
+              />
+              <span id="tool-speed-display">2.0</span>
             </label>
           </p>
         </div>
-
       </div>
     </section>
 
     <section id="about">
       <h3>What are PM2.5 particles?</h3>
       <p>
-        PM2.5 are very small particles, about less than 2.5 microns, less than one-tenth of the thickness of your hair. It is difficult to filter and is linked to increased chance in lung cancer.
+        PM2.5 are very small particles, about less than 2.5 microns, less than
+        one-tenth of the thickness of your hair. It is difficult to filter and
+        is linked to increased chance in lung cancer.
       </p>
       <h3>Where do PM2.5 particles come from?</h3>
       <p>
-        The common sources for PM2.5 particles are cigarette smoke, wood smoke, vehicle exhausts, and domestic fuel combustions.
+        The common sources for PM2.5 particles are cigarette smoke, wood smoke,
+        vehicle exhausts, and salt sprays from the ocean. This visualisation
+        only shows human-made emissions, which accounts for about 10 percent of
+        all PM2.5 particles.
       </p>
       <h3>What are the negative effects?</h3>
       <p>
-        PM2.5 particles has significant health impacts on people who have asthma, and introduced increase risk of premature mortality.
+        PM2.5 particles has significant health impacts on people who have
+        asthma, and introduced increase risk of premature mortality.
       </p>
     </section>
 
@@ -115,19 +170,19 @@
     <footer id="footer">
       <div id="legend">
         <p class="legend-item">
-          PM2.5 particles
+          Inland particles
           <span class="legend-bar legend-bar-pm25"></span>
-          '<br><span class="legend-max" id="legend-pm25-max"></span> µg/m³
+          '<br /><span class="legend-max" id="legend-pm25-max"></span> µg/m³
         </p>
         <p class="legend-item">
           Shipping plume
           <span class="legend-bar legend-bar-plume"></span>
-          '<br><span class="legend-max" id="legend-plume-max"></span> µg/m³
+          '<br /><span class="legend-max" id="legend-plume-max"></span> µg/m³
         </p>
         <p class="legend-item legend-list">
-        <br>
+          <br />
           <span class="legend-dot" style="color: rgb(252, 252, 151)">o</span>
-          Annual shipping emission average<br>
+          Annual shipping emission average<br />
           <span class="legend-dot" style="color: rgb(252, 151, 151)">o</span>
           Inland emission sources
         </p>
@@ -135,34 +190,65 @@
 
       <div id="credits">
         <p>
-          Air Quality, Oceans &amp; Atmosphere<br>
-          Scientific Computing, Information Management &amp; Technology<br>
+          <a href="https://twitter.com/Xavier_Ho">Xavier Ho</a>, Martin Cope<br />
+          Air Quality, Oceans &amp; Atmosphere<br />
+          Scientific Computing, Information Management &amp; Technology<br />
+          Australian Maritime College, University of Tasmania<br />
           <a href="//www.csiro.au">www.csiro.au</a>
         </p>
       </div>
 
       <div id="sources">
         <p>
-          You can <a href="mailto:xavier.ho@csiro.au">send us your feedback</a><br>
-          Source code for this website is available on <a href="https://github.com/csiro-scientific-computing/smoke-and-fire">GitHub</a><br>
-          Full dataset is published at <a href="https://data.csiro.au/dap/landingpage?list=SEA&pid=csiro:10509&sb=RELEVANCE&rn=1&rpp=25&p=1&tr=1&q=Fine%20Particles&dr=all">CSIRO Data Access Portal</a>
+          You can <a href="mailto:xavier.ho@csiro.au">send us your feedback</a
+          ><br />
+          Source code for this website is available on
+          <a href="https://github.com/csiro-scientific-computing/smoke-and-fire"
+            >GitHub</a
+          ><br />
+          Unqiue DOI entry is published at
+          <a
+            href="https://data.csiro.au/dap/landingpage?list=SEA&pid=csiro:10509&sb=RELEVANCE&rn=1&rpp=25&p=1&tr=1&q=Fine%20Particles&dr=all"
+            >CSIRO Data Access Portal</a
+          >
         </p>
       </div>
     </footer>
   </div>
 
   <!-- CSIRO Branding -->
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,600,700' rel='stylesheet' type='text/css'>
-  <link rel='stylesheet' id='csiro-tab-css'  href='https://www.csiro.au/themes/default/css/csirotab.css' type='text/css' media='all' />
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,600,700"
+    rel="stylesheet"
+    type="text/css"
+  />
+  <link
+    rel="stylesheet"
+    id="csiro-tab-css"
+    href="https://www.csiro.au/themes/default/css/csirotab.css"
+    type="text/css"
+    media="all"
+  />
 
-  <link type="text/css" rel="stylesheet" href="style.css">
+  <link type="text/css" rel="stylesheet" href="style.css" />
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-  <script type='text/javascript' src='https://www.csiro.au/themes/default/js/csirotab.js'></script>
+  <script
+    type="text/javascript"
+    src="https://www.csiro.au/themes/default/js/csirotab.js"
+  ></script>
 
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r71/three.min.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.19/topojson.min.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
+  <script
+    type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/three.js/108/three.js"
+  ></script>
+  <script
+    type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.19/topojson.min.js"
+  ></script>
+  <script
+    type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"
+  ></script>
   <script type="text/javascript" src="smoke-and-fire.min.js"></script>
-
 </body>
